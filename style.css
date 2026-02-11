@@ -1,0 +1,36 @@
+@import "tailwindcss";
+
+@theme {
+  --color-brand-purple: #6e398e;
+  --color-brand-purple-dark: #5a2e75;
+  --color-brand-pink: #c09acb;
+  --color-brand-pink-dark: #ab81b8;
+  --color-brand-pink-light: #dfcbe6;
+  --color-brand-cream: #fdfafc;
+  --color-gray-900: #1a1a1a;
+
+  --font-sans: 'Inter', system-ui, -apple-system, sans-serif;
+  --font-outfit: 'Outfit', sans-serif;
+}
+
+@layer utilities {
+  @keyframes spin-slow {
+    from {
+      transform: rotate(0deg);
+    }
+
+    to {
+      transform: rotate(360deg);
+    }
+  }
+
+  .animate-spin-slow {
+    animation: spin-slow 12s linear infinite;
+  }
+}
+
+@layer base {
+  body {
+    @apply font-sans antialiased text-gray-900 bg-white;
+  }
+}
